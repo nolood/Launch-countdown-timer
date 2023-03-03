@@ -146,3 +146,48 @@ $fontsize: 80px;
   color: $GrayishBlue;
   letter-spacing: 5px;
 }
+
+@media (max-width: 700px) {
+  .app__title{
+    margin-bottom: 10%;
+    font-size: $fontsize - 60px;
+  }
+  .card {
+    width: 100px;
+    height: 100px;
+  }
+  .card__title {
+    font-size: $fontsize - 20px;
+  }
+  .card__name {
+    font-size: $fontsize - 70px;
+    letter-spacing: 2px;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+  .app__title{
+    margin-bottom: 10%;
+    font-size: $fontsize - 70px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app__title{
+    margin-bottom: 10%;
+    font-size: $fontsize - 70px;
+  }
+  .card {
+    width: 75px;
+    height: 75px;
+  }
+  .card__title {
+    font-size: $fontsize - 40px;
+  }
+  .card__name {
+    font-size: $fontsize - 72px;
+    letter-spacing: 2px;
+  }
+}
