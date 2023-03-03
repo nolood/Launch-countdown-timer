@@ -1,0 +1,148 @@
+@import url('./reset.scss');
+
+$GrayishBlue: hsl(237, 18%, 59%);
+$SoftRed: hsl(345, 95%, 68%);
+
+$white: hsl(0, 0%, 100%);
+$DarkBlue: hsl(236, 21%, 26%);
+$VeryDarkBlue: hsl(235, 16%, 14%);
+$VeryDark: hsl(234, 17%, 12%);
+
+$fontsize: 80px;
+
+.App {
+  background-image: url('./../assets/bg-stars.svg');
+  background-color: $VeryDarkBlue;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hills {
+  width: 100%;
+}
+
+.timer {
+  margin-top: 0;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  height: 50%;
+  align-items: stretch;
+}
+
+.circle {
+  width: 11px;
+  height: 11px;
+  background-color: $VeryDark;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -5px;
+  left: -6px;
+}
+
+.circle-right {
+  width: 11px;
+  height: 11px;
+  background-color: $VeryDark;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+}
+
+.card__title {
+  font-size: $fontsize;
+  color: $SoftRed;
+}
+
+.card__flipper-border {
+  height: 1px;
+  width: 100%;
+  background-color: rgba($color: $VeryDark, $alpha: 0.2);
+  position: relative;
+}
+
+
+.card__flipper{
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.16);
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+}
+
+.card {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+
+.card__flip {
+  width: 100%;
+  height: 100%;
+}
+
+.front { 
+  background-color: $DarkBlue;
+  width: 100%;
+  height: 100%;
+  transition: 0.2s;
+  transform: translateY(150px);
+  opacity: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: -1px 12px 0px 0px $VeryDark;
+  -webkit-box-shadow: -1px 12px 0px 0px $VeryDark;
+  -moz-box-shadow: -1px 12px 0px 0px $VeryDark;
+}
+
+.back {
+  background-color: $DarkBlue;
+  width: 100%;
+  height: 100%;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: -1px 12px 0px 0px $VeryDark;
+  -webkit-box-shadow: -1px 12px 0px 0px $VeryDark;
+  -moz-box-shadow: -1px 12px 0px 0px $VeryDark;
+}
+
+.app__title {
+  color: $white;
+  font-size: $fontsize - 50px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  margin-bottom: 5%;
+}
+
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__name {
+  margin-top: 20%;
+  text-align: center;
+  font-size: $fontsize - 65px;
+  text-transform: uppercase;
+  color: $GrayishBlue;
+  letter-spacing: 5px;
+}
